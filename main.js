@@ -105,7 +105,7 @@ document.getElementsByClassName("add-task")[0].addEventListener("click",function
     let minutes =now.getMinutes()
     day < 10 ?  day ="0"+day : "";
    month < 10 ? month = "0"+month : "";
-   let newDate = `${hours > 12 ? hours = (hours - 12): hours}:${minutes} | ${day}/${month}/${year}  `
+   let newDate = `${hours > 12 ? hours = (hours - 12): hours}:${minutes < 10 ? "0"+minutes : minutes} | ${day}/${month}/${year}  `
     if(taskName !== null){
         let taskObj = {
                 "title":taskName,
